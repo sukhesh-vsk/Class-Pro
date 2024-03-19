@@ -1,10 +1,14 @@
+import React from 'react';
+import { Login, Register } from './components';
+
 import './App.css'
 
 function App() {
 
   return (
     <div>
-      hello
+      <Login />
+      <Register />
     </div>
   )
 }
