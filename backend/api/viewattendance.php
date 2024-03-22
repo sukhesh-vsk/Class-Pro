@@ -16,7 +16,6 @@ if ($result->num_rows > 0) {
     $dept = $row["dept"];
 
     $data = getAttendance($regno);
-    
 } else {
     echo "0 results";
 }
@@ -39,7 +38,6 @@ function getAttendance($regno)
         }
 
         return $data;
-        
     } else {
         echo "--- No record found ---";
     }
@@ -57,53 +55,72 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Attendance</title>
+    <link rel="stylesheet" href="./assets/css/atdnavbar.css">
 </head>
 
 <body>
-    <div>
+        <nav>
+            <ul class="navbar_">
+                <div class="clge_">
+                    <li><b>ABC College of Technology</b></li>
+                </div>
+                <div class="atdnavlinks_">
+                    <li><a href="studentdashboard.php">Home</a></li>
+                    <li><a href="logout.php">Logout</a></li>
+                </div>
+            </ul>
+        </nav>
         <div class="student__detail">
             <h2><?php echo $student_ ?></h2>
             <h3><?php echo $regno ?></h3>
             <h4><?php echo $dept ?></h4>
         </div>
-        <h1>Attendance</h1>
-        <div className="attendance__section">
+        <hr/>
+        <div class="section__head">
+            <center><h1>Attendance</h1></center>
+        </div>
+        <div class="attendance__section">
             <table>
                 <thead>
                     <tr>
-                        <td><h3>S No</h3>
+                        <td>
+                            <h3>S No</h3>
                         </td>
-                        <td><h3>Subject Name</h3>
+                        <td>
+                            <h3>Subject Name</h3>
                         </td>
-                        <td><h3>Course Code</h3>
+                        <td>
+                            <h3>Course Code</h3>
                         </td>
-                        <td><h3>No. of Hours</h3>
+                        <td>
+                            <h3>No. of Hours</h3>
                         </td>
-                        <td><h3>Hours Present</h3>
+                        <td>
+                            <h3>Hours Present</h3>
                         </td>
-                        <td><h3>Percentage</h3>
+                        <td>
+                            <h3>Percentage</h3>
                         </td>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                        foreach($data as $index=>$trow) {
+                    foreach ($data as $index => $trow) {
                     ?>
                         <tr>
-                            <td><?php echo $index+1 ?></td>
+                            <td><?php echo $index + 1 ?></td>
                             <td><?php echo $trow["coursename"] ?></td>
                             <td><?php echo $trow["coursecode"] ?></td>
                             <td><?php echo $trow["totalhours"] ?></td>
                             <td><?php echo $trow["present"] ?></td>
-                            <td><?php echo $trow["hoursabsent"] ?></td>
                             <td><?php echo $trow["percentage"] ?></td>
                         <?php
-                        }
+                    }
                         ?>
                 </tbody>
             </table>
         </div>
-    </div>
+        </div>
 </body>
 
 </html>

@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./assets/css/login.css">
 </head>
 
 <body>
-    <div>
-        <h1>Login</h1>
-        <form method="post" action="getuser.php">
-            <div>
-                <input type="text" name="mailid" placeholder="Mail Address" />
+    <section class="login_section_">
+        <div class="card">
+            <div class="login_title">
+                <h2>Login</h2>
             </div>
-            <div>
-                <input type="text" name="pwd" placeholder="Password" />
-            </div>
-            <button type="submit" name="save">Login</button>
-        </form>
-    </div>
+            <form method="post" action="getuser.php" class="login_form_">
+                <div class="form-group">
+                    <label for="email">Mail:</label><br>
+                    <input type="text" name="mailid" placeholder="Mail Address" />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label><br>
+                    <input type="text" name="pwd" placeholder="Password" />
+                </div>
+                <div>
+                    <button type="submit" name="save" style="text-decoration: none;">Login</button>
+                </div>
+            </form>
+        </div>
+    </section>
 </body>
 
 </html>

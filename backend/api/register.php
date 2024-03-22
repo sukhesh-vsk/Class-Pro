@@ -5,40 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Student</title>
+    <link rel="stylesheet" href="./assets/css/register.css">
 </head>
-
 <body>
-    <div>
-        <h1>Register New Student</h1>
-        <form method="post" action="adduser.php">
-            <div>
-                <input type="text" name="name_" placeholder="Student Name" />
+    <section class="signup_section_">
+    <div class="card">
+        <div class="signup_header">
+            <h2>Signup</h2>
+        </div>
+        <form method="post" action="adduser.php" class="register_form_">
+            <div class="form-group">
+                
+                <input type="text" name="name_" id="student-name" placeholder="Student Name" />
             </div>
-            <div>
-                <input type="text" name="regno" placeholder="Register Number" />
+            <div class="form-group">
+                
+                <input type="text" name="regno" id="register_no" placeholder="Register Number" />
             </div>
-            <div>
-                <input type="text" name="dob" placeholder="Date of Birth" />
+            <div class="form-group">
+                
+                <input type="text" name="dob" id="date-of-birth" placeholder="Date of Birth" />
             </div>
-            <div>
-                <input type="text" name="dept" placeholder="Department" />
+            <div class="form-group">
+                <input type="text" name="dept" id="department" placeholder="Department" />
             </div>
-            <div>
-                <input type="text" name="batch" placeholder="Batch" />
+            <div class="form-group">
+                
+                <input type="text" name="batch" id="batch" placeholder="Batch" />
             </div>
-            <div>
-                <input type="text" name="mailid" placeholder="Email" />
+            <div class="form-group">
+                
+                <input type="text" name="mailid" id="email" placeholder="Email" />
             </div>
-            <div>
-                <input type="text" name="phno" placeholder="Phone Number" />
+            <div class="form-group">
+                
+                <input type="text" name="phno" id="phone-number" placeholder="Phone Number" />
             </div>
-            <div>
-                <input type="password" name="pwd" placeholder="Password" />
+            <div class="form-group">
+                
+                <input type="password" name="pwd" id="password" placeholder="Password" />
             </div>
-            <input type="submit" name="save" value="submit" />
+            <div class="form-group">
+                
+                <input type="password" id="confirm-password" placeholder="Confirm Password" />
+            </div>
+            <div class="register_btn">
+                <button type="submit" name="save" value="sumbit">Signup</button>
+            </div>
         </form>
-
     </div>
+    </section>
 </body>
-
 </html>
