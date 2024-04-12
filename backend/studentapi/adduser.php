@@ -10,7 +10,6 @@ if(isset($_POST['save'])) {
     $email = $_POST['mailid'];
     $dob = $_POST['dob'];
     $password_ = $_POST['pwd'];
-    
     $query = "INSERT INTO students(`regno`, `name`, `dept`, `batch`, `dob`, `phno`, `mail`, `password`) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
     
     $stmt = mysqli_prepare($conn, $query);
